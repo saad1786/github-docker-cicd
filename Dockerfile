@@ -8,7 +8,7 @@ RUN apt install mysql-server -y
 RUN apt install php7.4 php7.4-fpm php-mysql -y
 RUN apt install nano 
 
-COPY index.php /var/www/
+COPY index.php /var/www/mysite
 
 CMD service mysql start && service php7.4-fpm start && nginx -g 'daemon off;'
 
